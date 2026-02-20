@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pets and Sports</title>
+    <style>
+       body, html {
+    height: 100%;              
+    margin: 0;                 
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-color: #f2f2f2;    
+}
+
+.container {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+select, button {
+    padding: 8px 12px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#sportDescription {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body class="default-bg">
+    <div class="container">
+        <h2>Pets and Sports Selection</h2>
+        <select id="petSelect" onchange="changeBackground()">
+            <option value="">Select a Pet</option>
+            <option value="dog.jpg">Dog</option>
+            <option value="cat.jpg">Cat</option>
+            <option value="rabbit.jpg">Rabbit</option>
+        </select>
+        <select id="sportSelect" onchange="showDescription()" onchange="changeBackground()">
+            <option value="">Select deez nuts Sport</option>
+            <option value="cricket">Cricket</option>
+            <option value="football">Football</option>
+            <option value="basketball">Basketball</option>
+        </select>
+
+        <button onclick="resetPage()">Reset</button>
+        <div id="sportDescription"></div>
+    </div>
+    <script>
+function changeBackground() {
+    let pet = document.getElementById("petSelect").value;
+    if (pet !== "") {
+        document.body.style.backgroundImage = "url('images/" + pet + "')";
+    } else {
+        let sport = document.getElementById("sportSelect").value;
+        if (sport !== "") {
+            document.body.style.backgroundImage = "url('images/" + sport + ".jpg')";
+        } else {
+            document.body.style.backgroundImage = "";
+            document.body.style.backgroundColor = "#f2f2f2";
+        }
+    }
+}
+function showDescription() {
+    let sport = document.getElementById("sportSelect").value;
+    let description = document.getElementById("sportDescription");
+    let pet = document.getElementById("petSelect").value;
+
+    if (sport === "cricket") {
+        description.innerHTML = "Cricket is a bat-and-ball game played between two teams.";
+    } 
+    else if (sport === "football") {
+        description.innerHTML = "Football is a team sport played with a spherical ball.";
+    } 
+    else if (sport === "basketball") {
+        description.innerHTML = "Basketball is played by two teams aiming to score through a hoop.";
+    } 
+    else {
+        description.innerHTML = "";
+    }
+    if (pet === "" && sport !== "") {
+        document.body.style.backgroundImage = "url('images/" + sport + ".jpg')";
+    }
+}
+function resetPage() {
+    document.getElementById("petSelect").selectedIndex = 0;
+    document.getElementById("sportSelect").selectedIndex = 0;
+    document.getElementById("sportDescription").innerHTML = "";
+    document.body.style.backgroundImage = "";
+    document.body.style.backgroundColor = "#f2f2f2";
+}
+    </script>
+</body>
+</html>
