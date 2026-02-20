@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <title>SEPHARIME</title>
+       
+        <style>
+            
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f8f8f8;
+        color: #333;
+    }
+
+    header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header img {
+        border-radius: 10px;
+        margin-top: 10px;
+        align-items:center;
+
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    section {
+        padding: 20px;
+        margin: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    article {
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        margin-bottom: 5px;
+        color: #e67e22;
+    }
+
+    img {
+        display: block;
+        margin: 10px 0;
+        border-radius: 8px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    form {
+        padding: 20px;
+        background: #ecf0f1;
+        border-radius: 8px;
+    }
+
+    input[type="number"] {
+        width: 60px;
+        padding: 5px;
+        margin-left: 10px;
+    }
+
+    input[type="submit"] {
+        background-color: #e67e22;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #d35400;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        resize: none;
+    }
+
+    footer {
+        text-align:center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #555;
+    }
+    
+</style>
+
+    </head>
+
+    <body>
+        
+        <header id="header-img">
+            <h1>SEPHARIME</h1>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAbFBMVEX///86OjxOTk/w8PA2Njh4eHmRkZMuLTEzMza4uLkjIyX7+/sAAABubm7e3t709PRXV1jR0dHq6urk5OQdHSAQEBQnJyqdnZ1FRUfHx8guLi9kZGVeXl+ysrKkpKTY2NiJiYsXFxiCgoIGBgxlNqbLAAADs0lEQVR4nO2a2ZKqMBBACQQM+yJLCKv4//94g4omwFUfxoSHPlVTOi7FqXTS6Q4aBgAAAAAAAAAAAAAAAAAAgG4iX7fBDm6n22CHLtRtsMPYxroVNlhJczyp2rN1K2wxvUq3woYuLyzdDmsy6o26HTbYZXKIgfKFDH6+BKk+EwFXyABOvll6WvKDH/rC83I9UKmWkaum1/M43Mwo86zUZrlqL/xjJ6topShTanMnQmJRULPVwPQ4UqpzJ2XiSBlNL79dlbVKmwcDCsWiznfkcPXFylIJsenJAZInVedpqa7G/N1lI3TVsfzSAr0rypNyevPur7Cu8qqPUsmxvhAN6XMokDiNOkRCMYH6to5ZNUnbXUYxkhfcmV2V1w1nWoqrLzMx8uQsMAWuWiWeHQMho0e1m2DEqnoQIhoFyutjNN4f/awL2zAkGCFECKKJEz3ELKpaKqb3S7sNc7qqIWgBl4VZ3VKU36gOXzxf0HcR7aKK3obpBT6Rac4Wto70ObRF77vUQ1tKxmecq+HEo89DKw5LvOM0R7HRUVA5fHEN9LSrNMM01J52XhvuifzXia9FprrO63lmTP8TuqeVqTaCbtHx6uS9E49gq1Rq3mxb9sEJoYvKTOUgiy++j04IKwzgvIHMO/BnSnVD5V75TN/LmRuIqUxq4pXUVwOFUKDsSMFLeV3ylRPKlbV/xZlPc/IVubL2b/KNyv6OUNFMHyqnqpyvUbPXNPmpLE9fwvLmVx6xKzB+N8UXRvG7f7kWq6DIvYXPu4sEe34xL/60lRhs22R4xf2a/GHv9fWHOcy07eEPpThnm5oyFFPegZoEJ4n8xqxlbrF/sA/6lkzsMuyYuG9YO8Ti61WJcLP+NEdNxT55uEXe2DIq9echQWxUIrBHnMzVME4QE5sEi4cvV96wv8hutSf/Y8KJ9cBfuug4hV1Iy2Xdm8/DKJfXNFjrfRp3KT8JW6wcPs/Xp+qK6dijy8LMuS0vn6cJEmr+NUBKlxDmzVw7zaW7dikjnhYrUqIGsduC1H+Lu3r1NUssD3BDsls3EbmWW1grnMtKSmPyfOHIY3U6xk8URqlfxuravbd0khU9wqQy1lY67vbtkbJX08wO81uq+nVKfBwpY/AWK3aInHCnWzodcpQ5NeOwA0rFwaOdOpKU0SQ3zANJZVn04JzpuOGwS3AtHgRBob+muvNM6tgOse7qc+EpReo0P4pUsZwqMt7eHETKb0OBg0gZvohuGQAAAAAAAAAAAAAAAAAAfss/8PIz7mSpG/UAAAAASUVORK5CYII=" alt="Restaurant Image" width="150" >
+                              
+                <nav>
+                <ul>
+                    <li><a href="#order-form">Order</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <h1>Welcome to Our Restaurant</h1>
+        <p>Enjoy our delicious menu!</p>
+        <section id="menu">
+            <h1>MENU</h1>
+            <article>
+
+                <h2>Appetizers</h2>
+                
+                    <h3>Bruschetta -<span style="font-style:italic"> $5</span></h3>
+                        <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-tSvyVRmuo5rEJx-yQFBCnDwXgH7doHDHgsmZiQe8r_ouD2MFtD3YFEa5fDKENNB3jeWqPaMPMH0sjqyCqMfQkEhcygI_82Ac8JxWD-Th3Q&s=10" width="100" alt="bruschetta"/>
+                    <p>Bruschetta is a classic Italian appetizer made of grilled bread rubbed with garlic and topped with fresh ingredients.
+It is most commonly served with diced tomatoes, basil, olive oil, and a pinch of salt, giving it a fresh and tangy flavor.
+It’s crispy, light, and perfect as a starter snack.</p>
+                    <h3>Quesadilla - <span style="font-style:italic">$7</span></h3>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT-fR4cz9z_9HP-iezumrT-qn-6z7Xg4iN9AaFyehkT4wQqRE_jorerRYe3ZK8Xlgt7SaGg-WgHDm5KU8RjZu_WwjcqUr_6bm21let_y06oA&s=10"  width="100" alt="quesadilla"/>
+                        <p>Quesadillas are a popular Mexican dish made with tortillas filled with cheese and other ingredients like chicken, beef, or vegetables. They are typically grilled or fried until crispy and served with salsa or guacamole.</p>
+            </article>
+            <article>
+                <h2>MAIN COURSE</h2>
+                <h3>Grilled Salmon - <span style="font-style:italic">$15</span></h3>
+                    <img src="data:image/jpeg;base64,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" width="100" alt="grilled salmon"/>
+                    <p>Grilled salmon is a delicious and healthy main course option. The salmon is seasoned with herbs and spices, then grilled to perfection, resulting in a flavorful and tender dish.</p>
+                 <h3>Chicken Alfredo -<span style="font-style:italic">$12</span> </h3>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhQuwoaNLwaclEQpCBUR0yziQ03cQ-3K5g54hfNsfd8Ur53dzkwK058_wBMaFaOqJARglHIT7eW_nWeU26OUyC24pn0qF73xpGWRkbRtyA&s=10" width="100" alt="chicken alfredo"/>
+                    <p>Chicken Alfredo is a creamy pasta dish  tender chicken pieces, and a rich Alfredo sauce. The sauce is typically made with butter, heavy cream, and Parmesan cheese, creating a decadent and satisfying meal.</p>     
+                </article>
+            <article>
+                <h2>DESSERTS</h2>
+                <h3>Chocolate Lava Cake -<span style="font-style:italic"> $6</span></h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX2D2PDWejfQtOB9Vp08v8yjkqV9qytWjnZXuWwgxKDBJgoIfLgIdWpkzacwgLtFyzoKGQFPzEm-9MUwZ5P4e8QVudPQp3SM9UbKz33RiP&s=10" width="100" alt="Choco lava cake"/>
+                <p>Chocolate Lava Cake is a decadent dessert that features a rich and gooey chocolate center. The cake is typically made with high-quality chocolate and has a soft, moist texture. When you cut into it, the molten chocolate flows out, creating a delightful and indulgent treat.</p>         
+                    <h3>Cheesecake -<span style="font-style:italic"> $5</span>
+                    </h3>
+                    <img src="data:image/webp;base64,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" width="100" alt="cheesecake"/>
+                    <p>Cheesecake is a creamy and delicious dessert that is made with a mixture of cream cheese, sugar, and eggs. It typically has a graham cracker crust and can be topped with various fruits, chocolate, or caramel sauce. Cheesecake is known for its smooth and rich texture, making it a popular choice for dessert lovers.</p>
+            </article>
+        </section>
+        <section id="order-form">
+            <h1>Place Your Order</h1>
+        <form id="order" action="submit_order.php" method="post">
+            <label for="input">Quantity:</label><br>
+            <input type="checkbox" id="input" name="bru" >Bruschetta  <input type="number" id="input" name="bru_qty" min="0" width="12" >
+            <br>
+            <input type="checkbox" id="input" name="ques" >Quesadilla  <input type="number" id="input" name="quesa_qty" min="0" width="12" >
+            <br>
+            <input type="checkbox" id="input" name="sal" >Grilled Salmon  <input type="number" id="input" name="sal_qty" min="0" width="12" >
+            <br>
+            <input type="checkbox" id="input" name="alf" >Chicken alfredo <input type="number" id="input" name="alf_qty" min="0" width="12" >
+            <br>
+            <input type="checkbox" id="input" name="lav" >Chocolate lava cake <input type="number" id="input" name="lav_qty" min="0" width="12" >
+            <br>
+            <input type="checkbox" id="input" name="chees" >Cheesecake <input type="number" id="input" name="chees_qty" min="0" width="12" >
+            <br><br>
+            <label for="spec">Special Request :</label><br>
+            <textarea placeholder="Special Requests" rows="20" col="20" id="spec"></textarea><br><br>
+           <label for="add">Add ons:</label><br>
+           <input type="radio" id="add" name="ad">Coke
+           <br>
+           <input type="radio" id="add" name="ad">Pepsi
+           <br>
+           <input type="radio" id="add" name="ad">Sprite
+           <br>
+           <input type="radio" id="add" name="ad">7up
+            <br><br>
+           <input type="submit" value="GO TO CHECKOUT">
+
+           <footer><p>Made with love by : Divyansh </p></footer>
+
+        </form>
+    </body>
+</html>
